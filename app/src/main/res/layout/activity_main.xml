@@ -75,5 +75,25 @@
             android:layout_rowWeight="1"
             app:srcImage="@drawable/ic_sondage"
             app:titleText="@string/btn_sondage"/>
+        <com.hackathon.views.HomeButtonView
+            android:id="@+id/btn_video"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:srcImage="@drawable/ic_sondage"
+            app:titleText="@string/btn_video"/>
+        <com.hackathon.views.HomeButtonView
+            android:id="@+id/btnfile"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:srcImage="@drawable/ic_sondage"
+            app:titleText="@string/btn_video"/>
     </GridLayout>
 </LinearLayout>
