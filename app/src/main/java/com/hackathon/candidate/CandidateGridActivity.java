@@ -24,7 +24,7 @@ public class CandidateGridActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_election_view);
+        setContentView(R.layout.activity_candidate_grid);
 
         TextView textView1 = findViewById(R.id.title);
         TextView textView2 = findViewById(R.id.subtitle);
