@@ -29,9 +29,10 @@
             android:name=".menu_principale"
             android:screenOrientation="portrait" />
         <activity android:name=".candidate.CandidateListActivity" />
-        <activity android:name=".candidate.CandidateViewActivity"/>
+        <activity android:name=".candidate.CandidateViewActivity" />
         <activity android:name=".election.ElectionListActivity" />
-        <activity android:name=".election.ElectionViewActivity"/>
+        <activity android:name=".election.ElectionViewActivity" />
+        <activity android:name=".list.ListActivity"></activity>
     </application>
 
 </manifest>
