@@ -45,7 +45,8 @@ public class ElectionListActivity extends AppCompatActivity implements ClickList
     public void onClick(View view, int position) {
         Election item = elections.get(position);
         Intent i = new Intent(this, ElectionViewActivity.class);
-        i.putExtra("id", position);
+        i.putExtra("title", "Election "+position);
+        i.putExtra("subtitle", "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.");
         startActivity(i);
     }
 

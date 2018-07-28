@@ -1,4 +1,4 @@
-package com.hackathon.election;
+package com.hackathon.candidate;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,15 +10,16 @@ import android.util.TypedValue;
 import android.widget.TextView;
 
 import com.hackathon.R;
-import com.hackathon.candidate.Candidate;
-import com.hackathon.candidate.CandidateListAdapter;
+import com.hackathon.election.ElectionGridAdapter;
+import com.hackathon.election.ElectionGridLoader;
+import com.hackathon.election.GridSpacingItemDecoration;
 import com.hackathon.result.Result;
 
 import java.util.ArrayList;
 
-public class ElectionViewActivity extends AppCompatActivity {
-    private ArrayList<Result> results;
-    private ElectionGridAdapter adapter;
+public class CandidateGridActivity extends AppCompatActivity {
+    private ArrayList<Candidate> candidates;
+    private CandidateGridAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,11 @@ public class ElectionViewActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        results = new ArrayList<>();
-        adapter = new ElectionGridAdapter(results, this);
+        candidates = new ArrayList<>();
+        adapter = new CandidateGridAdapter(candidates, this);
         recyclerView.setAdapter(adapter);
 
-        new ElectionGridLoader(adapter).execute();
+        new CandidateGridLoader(adapter).execute();
     }
 
     /**

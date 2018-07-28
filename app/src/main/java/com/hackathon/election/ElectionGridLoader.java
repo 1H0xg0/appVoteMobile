@@ -1,23 +1,25 @@
-package com.hackathon.result;
+package com.hackathon.election;
 
 import android.os.AsyncTask;
 
 import com.hackathon.candidate.Candidate;
+import com.hackathon.result.Result;
 
 import java.util.ArrayList;
 
-public class ResultListLoader extends AsyncTask<Void, Void, ArrayList<Result>> {
+public class ElectionGridLoader extends AsyncTask<Void, Void, ArrayList<Result>> {
 
-    private ResultListAdapter adapter;
+    private ElectionGridAdapter adapter;
 
-    public ResultListLoader(ResultListAdapter adapter) {
+    public ElectionGridLoader(ElectionGridAdapter adapter) {
         this.adapter = adapter;
     }
 
     @Override
     protected ArrayList<Result> doInBackground(Void... voids) {
         ArrayList<Result> results = new ArrayList<>();
-        for(int i=0; i<20; i++){
+        //Election election = new Election(1, "Title "+1, "Description "+1, "28 Juillet 2018");
+        for(int i=0; i<10; i++){
             Candidate candidate = new Candidate();
             candidate.setLastName("Prenom "+i);
             candidate.setFirstName("Nom "+i);

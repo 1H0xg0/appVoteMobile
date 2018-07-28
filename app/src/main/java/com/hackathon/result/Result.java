@@ -1,58 +1,24 @@
 package com.hackathon.result;
 
+import com.hackathon.candidate.Candidate;
+
 public class Result {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private String profile;
-    private String programme;
-    private String biographie;
+    private Candidate candidate;
+    private int vote;
 
-    public String getFirstName() {
-        return firstName;
+    public int getVote() {
+        return vote;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setVote(int vote) {
+        this.vote = vote;
     }
 
-    public String getLastName() {
-        return lastName;
+    public Candidate getCandidate() {
+        return candidate;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getProfile() {
-        return profile;
-    }
-
-    public void setProfile(String profile) {
-        this.profile = profile;
-    }
-
-    public String getProgramme() {
-        return programme;
-    }
-
-    public void setProgramme(String programme) {
-        this.programme = programme;
-    }
-
-    public String getBiographie() {
-        return biographie;
-    }
-
-    public void setBiographie(String biographie) {
-        this.biographie = biographie;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setCandidate(Candidate candidate) {
+        this.candidate = candidate;
     }
 }

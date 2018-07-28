@@ -31,7 +31,7 @@ public class ResultListItemView extends LinearLayout {
         this.item = item;
         if(item==null) return;
 
-      descriptionView.setText(item.getFirstName());
-      descriptionView.setText(item.getLastName());
+      descriptionView.setText("Description");
+      titleView.setText("Title");
     }
 }

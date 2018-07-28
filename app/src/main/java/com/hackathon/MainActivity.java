@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import com.hackathon.candidate.CandidateGridActivity;
 import com.hackathon.candidate.CandidateListActivity;
 import com.hackathon.election.ElectionListActivity;
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()){
             case R.id.btn_candidat :
-                i = new Intent(this, CandidateListActivity.class);
+                i = new Intent(this, CandidateGridActivity.class);
                 startActivity(i);
                 break;
             case R.id.btn_election :

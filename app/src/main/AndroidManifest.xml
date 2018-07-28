@@ -31,15 +31,26 @@
         <activity android:name=".candidate.CandidateListActivity">
 
         </activity>
-        <activity android:name=".candidate.CandidateViewActivity"></activity>
+        <activity android:name=".candidate.CandidateGridActivity">
+
+        </activity>
+
+        <activity android:name=".candidate.CandidateViewActivity">
+
+        </activity>
         <activity android:name=".candidate.CandidateDetailActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
-        <activity android:name=".election.ElectionListActivity"></activity>
-        <activity android:name=".election.ElectionViewActivity"></activity>
-        
+        <activity android:name=".election.ElectionListActivity">
+
+        </activity>
+        <activity android:name=".election.ElectionViewActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
         <activity android:name=".list.ListActivity"></activity>
     </application>
 
