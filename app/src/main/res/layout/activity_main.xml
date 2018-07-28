@@ -35,7 +35,20 @@
         android:layout_height="0dp"
         android:padding="14dp">
         <com.hackathon.views.HomeButtonView
+            android:id="@+id/btn_candidat"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:srcImage="@drawable/ic_home_list"
+            app:titleText="@string/btn_candidat"
+            android:layout_row="0"/>
+        <com.hackathon.views.HomeButtonView
             android:id="@+id/btn_election"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
@@ -43,28 +56,24 @@
             app:srcImage="@drawable/ic_home_vote"
             app:titleText="@string/btn_election"/>
         <com.hackathon.views.HomeButtonView
-            android:id="@+id/btn_result"
+            android:id="@+id/btn_doleance"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            app:srcImage="@drawable/ic_home_resultat"
-            app:titleText="@string/btn_result"/>
-        <com.hackathon.views.HomeButtonView
-            android:id="@+id/btn_candidat"
-            android:layout_height="0dp"
-            android:layout_width="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:srcImage="@drawable/ic_home_list"
-            app:titleText="@string/btn_candidat"/>
+            app:srcImage="@drawable/ic_doleance"
+            app:titleText="@string/btn_doleance"/>
         <com.hackathon.views.HomeButtonView
             android:id="@+id/btn_sondage"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            app:srcImage="@drawable/ic_home_list"
+            app:srcImage="@drawable/ic_sondage"
             app:titleText="@string/btn_sondage"/>
     </GridLayout>
 </LinearLayout>

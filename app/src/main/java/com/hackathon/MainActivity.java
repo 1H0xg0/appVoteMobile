@@ -11,22 +11,25 @@ import com.hackathon.election.ElectionListActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private View btn_result;
+    private View btn_doleance;
     private View btn_candidat;
     private View btn_election;
+    private View btn_sondage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_result = findViewById(R.id.btn_result);
+        btn_doleance = findViewById(R.id.btn_doleance);
         btn_candidat = findViewById(R.id.btn_candidat);
         btn_election = findViewById(R.id.btn_election);
+        btn_sondage = findViewById(R.id.btn_sondage);
 
-        btn_result.setOnClickListener(this);
+        btn_doleance.setOnClickListener(this);
         btn_candidat.setOnClickListener(this);
         btn_election.setOnClickListener(this);
+        btn_sondage.setOnClickListener(this);
 
     }
 
@@ -35,16 +38,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i;
 
         switch (view.getId()){
-            case R.id.btn_result :
-                i = new Intent(this, LoginActivity.class);
-                startActivity(i);
-                break;
             case R.id.btn_candidat :
                 i = new Intent(this, CandidateListActivity.class);
                 startActivity(i);
                 break;
             case R.id.btn_election :
                 i = new Intent(this, ElectionListActivity.class);
+                startActivity(i);
+                break;
+            case R.id.btn_doleance :
+                i = new Intent(this, LoginActivity.class);
+                startActivity(i);
+                break;
+            case R.id.btn_sondage :
+                i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 break;
         }

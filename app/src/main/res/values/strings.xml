@@ -9,4 +9,5 @@
     <string name="first_name">Nom</string>
     <string name="last_name">Prenom</string>
     <string name="btn_election">Election</string>
+    <string name="btn_doleance">Doleance</string>
 </resources>
