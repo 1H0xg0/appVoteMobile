@@ -24,11 +24,14 @@
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".menu_principale"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".candidate.CandidateListActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".candidate.CandidateListActivity" />
+        <activity android:name=".candidate.CandidateViewActivity"/>
+        <activity android:name=".election.ElectionListActivity" />
+        <activity android:name=".election.ElectionViewActivity"/>
     </application>
 
 </manifest>

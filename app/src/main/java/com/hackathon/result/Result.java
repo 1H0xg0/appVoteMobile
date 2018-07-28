@@ -1,6 +1,6 @@
-package com.hackathon.candidate;
+package com.hackathon.result;
 
-public class Candidate {
+public class Result {
     private int id;
     private String firstName;
     private String lastName;

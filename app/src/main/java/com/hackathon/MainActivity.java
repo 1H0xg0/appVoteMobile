@@ -7,25 +7,26 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 
 import com.hackathon.candidate.CandidateListActivity;
+import com.hackathon.election.ElectionListActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private View btn_vote;
     private View btn_result;
     private View btn_candidat;
+    private View btn_election;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_vote = findViewById(R.id.btn_vote);
         btn_result = findViewById(R.id.btn_result);
         btn_candidat = findViewById(R.id.btn_candidat);
+        btn_election = findViewById(R.id.btn_election);
 
-        btn_vote.setOnClickListener(this);
         btn_result.setOnClickListener(this);
         btn_candidat.setOnClickListener(this);
+        btn_election.setOnClickListener(this);
 
     }
 
@@ -34,17 +35,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i;
 
         switch (view.getId()){
-            case R.id.btn_vote : {
-                i = new Intent(this, menu_principale.class);
-                startActivity(i);
-            }
-            break;
             case R.id.btn_result :{
                 i = new Intent(this, LoginActivity.class);
                 startActivity(i);
             }
             case R.id.btn_candidat :{
                 i = new Intent(this, CandidateListActivity.class);
+                startActivity(i);
+            }
+            case R.id.btn_election :{
+                i = new Intent(this, ElectionListActivity.class);
                 startActivity(i);
             }
             break;

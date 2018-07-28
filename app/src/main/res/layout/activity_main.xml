@@ -35,13 +35,13 @@
         android:layout_height="0dp"
         android:padding="14dp">
         <com.hackathon.views.HomeButtonView
-            android:id="@+id/btn_vote"
+            android:id="@+id/btn_election"
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             app:srcImage="@drawable/ic_home_vote"
-            app:titleText="@string/btn_vote"/>
+            app:titleText="@string/btn_election"/>
         <com.hackathon.views.HomeButtonView
             android:id="@+id/btn_result"
             android:layout_height="0dp"

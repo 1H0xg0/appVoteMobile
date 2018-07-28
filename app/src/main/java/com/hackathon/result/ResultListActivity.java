@@ -1,8 +1,8 @@
-package com.hackathon.candidate;
+package com.hackathon.result;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,38 +10,37 @@ import android.view.View;
 import com.hackathon.ClickListener;
 import com.hackathon.R;
 import com.hackathon.RecyclerViewListener;
-import com.hackathon.menu_principale;
 
 import java.util.ArrayList;
 
-public class CandidateListActivity extends AppCompatActivity implements ClickListener{
+public class ResultListActivity extends AppCompatActivity implements ClickListener{
 
     private RecyclerView recyclerView;
-    private ArrayList<Candidate> candidates;
-    private CandidateListAdapter adapter;
+    private ArrayList<Result> results;
+    private ResultListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_candidate_list);
+        setContentView(R.layout.activity_result_list);
 
         recyclerView = findViewById(R.id.recyclerView);
 
         // Define a layout for RecyclerView
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
-        candidates = new ArrayList<>();
-        adapter = new CandidateListAdapter(candidates, this);
+        results = new ArrayList<>();
+        adapter = new ResultListAdapter(results, this);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnItemTouchListener(new RecyclerViewListener(this, recyclerView, this));
 
-        new CandidateListLoader(adapter).execute();
+        new ResultListLoader(adapter).execute();
     }
 
     @Override
     public void onClick(View view, int position) {
-        Candidate item = candidates.get(position);
-        Intent i = new Intent(this, CandidateViewActivity.class);
+        Result item = results.get(position);
+        Intent i = new Intent(this, ResultViewActivity.class);
         i.putExtra("id", position);
         startActivity(i);
     }
