@@ -36,25 +36,6 @@
             android:elevation="4dp"
             android:paddingBottom="24dp">
 
-
-            <ImageView
-                android:id="@+id/add_friend"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_toLeftOf="@+id/drop_down_option_menu"
-                android:src="@android:drawable/ic_menu_add" />
-
-            <ImageView
-                android:id="@+id/drop_down_option_menu"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:src="@android:drawable/ic_menu_add" />
-
             <TextView
                 android:id="@+id/user_profile_name"
                 android:layout_width="wrap_content"
@@ -80,6 +61,7 @@
 
 
         <LinearLayout
+            android:id="@+id/container"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_layout"
@@ -87,6 +69,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/profile"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -97,6 +80,7 @@
                 android:text="Android Profile UI Design" />
 
             <TextView
+                android:id="@+id/biographie"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -109,6 +93,7 @@
                 android:text="Android Profile XMl UI Design" />
 
             <TextView
+                android:id="@+id/programme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -119,6 +104,7 @@
                 android:text="Android Profile UI Design" />
 
             <TextView
+                android:id="@+id/other"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -129,16 +115,6 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:text="Android Profile XMl UI Design" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="#fff"
-                android:clickable="true"
-                android:elevation="4dp"
-                android:padding="20dp"
-                android:text="Android Profile UI Design" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

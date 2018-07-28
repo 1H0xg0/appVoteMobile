@@ -14,7 +14,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,10 +28,18 @@
         <activity
             android:name=".menu_principale"
             android:screenOrientation="portrait" />
-        <activity android:name=".candidate.CandidateListActivity" />
-        <activity android:name=".candidate.CandidateViewActivity" />
-        <activity android:name=".election.ElectionListActivity" />
-        <activity android:name=".election.ElectionViewActivity" />
+        <activity android:name=".candidate.CandidateListActivity">
+
+        </activity>
+        <activity android:name=".candidate.CandidateViewActivity"></activity>
+        <activity android:name=".candidate.CandidateDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".election.ElectionListActivity"></activity>
+        <activity android:name=".election.ElectionViewActivity"></activity>
+        
         <activity android:name=".list.ListActivity"></activity>
     </application>
 
