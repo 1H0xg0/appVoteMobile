@@ -46,7 +46,6 @@ public class CandidateListActivity extends AppCompatActivity implements ClickLis
         Intent i = new Intent(this, CandidateViewActivity.class);
         i.putExtra("id", position);
         startActivity(i);
-        Toast.makeText(this, "POsition "+position, Toast.LENGTH_SHORT).show();
     }
 
     @Override
