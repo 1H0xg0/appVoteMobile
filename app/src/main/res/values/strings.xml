@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HACKATHON</string>
+    <string name="open">Ouvrir</string>
+    <string name="close">Fermer</string>
+</resources>
