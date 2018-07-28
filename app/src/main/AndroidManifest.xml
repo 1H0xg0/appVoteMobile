@@ -34,7 +34,6 @@
         <activity android:name=".candidate.CandidateGridActivity">
 
         </activity>
-
         <activity android:name=".candidate.CandidateViewActivity">
 
         </activity>

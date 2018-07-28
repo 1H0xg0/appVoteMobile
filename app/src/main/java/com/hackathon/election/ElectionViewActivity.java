@@ -1,5 +1,6 @@
 package com.hackathon.election;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,16 +8,20 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
+import android.view.View;
 import android.widget.TextView;
 
+import com.hackathon.ClickListener;
 import com.hackathon.R;
+import com.hackathon.RecyclerViewListener;
 import com.hackathon.candidate.Candidate;
 import com.hackathon.candidate.CandidateListAdapter;
+import com.hackathon.candidate.CandidateViewActivity;
 import com.hackathon.result.Result;
 
 import java.util.ArrayList;
 
-public class ElectionViewActivity extends AppCompatActivity {
+public class ElectionViewActivity extends AppCompatActivity implements ClickListener {
     private ArrayList<Result> results;
     private ElectionGridAdapter adapter;
 
@@ -47,7 +52,22 @@ public class ElectionViewActivity extends AppCompatActivity {
         adapter = new ElectionGridAdapter(results, this);
         recyclerView.setAdapter(adapter);
 
+        recyclerView.addOnItemTouchListener(new RecyclerViewListener(this, recyclerView, this));
+
         new ElectionGridLoader(adapter).execute();
+    }
+
+    @Override
+    public void onClick(View view, int position) {
+        Candidate item = results.get(position).getCandidate();
+        Intent i = new Intent(this, CandidateViewActivity.class);
+        i.putExtra("id", position);
+        startActivity(i);
+    }
+
+    @Override
+    public void onLongClick(View view, int position) {
+
     }
 
     /**
