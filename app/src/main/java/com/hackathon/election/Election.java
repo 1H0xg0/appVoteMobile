@@ -4,11 +4,13 @@ public class Election {
     private int id;
     private String title;
     private String description;
+    private String date;
 
-    public Election(int id, String title, String description) {
+    public Election(int id, String title, String description, String date) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.date = date;
     }
 
     public int getId() {
@@ -33,5 +35,13 @@ public class Election {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

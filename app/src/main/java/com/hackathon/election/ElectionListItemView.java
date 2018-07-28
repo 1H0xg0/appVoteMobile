@@ -33,6 +33,6 @@ public class ElectionListItemView extends LinearLayout {
         if(item==null) return;
 
       titleView.setText(item.getTitle());
-        descriptionView.setText(item.getDescription());
+        descriptionView.setText(item.getDate());
     }
 }
