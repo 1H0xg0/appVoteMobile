@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MenuItemView">
+        <attr name="titleText" format="string" localization="suggested" />
+        <attr name="titleRes" format="integer"/>
+        <attr name="numberText" format="string" />
+        <attr name="srcImage" format="integer" />
+        <attr name="titleTextBg" format="integer" />
+        <attr name="textSize" format="dimension" />
+        <attr name="layout_marginBottom" format="dimension" />
+    </declare-styleable>
+</resources>
