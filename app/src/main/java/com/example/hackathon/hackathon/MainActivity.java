@@ -6,12 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-public class homepage extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private CardView Vote,Result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.homepage);
+        setContentView(R.layout.activity_main);
 
         Vote = (CardView) findViewById(R.id.card_vote);
         Result = (CardView) findViewById(R.id.card_result);
@@ -32,7 +32,7 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
             }
             break;
             case R.id.card_result :{
-                i = new Intent(this,login.class);
+                i = new Intent(this,LoginActivity.class);
                 startActivity(i);
             }
             break;
