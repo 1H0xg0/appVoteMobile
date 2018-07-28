@@ -1,4 +1,4 @@
-package com.example.hackathon.hackathon;
+package com.hackathon;
 
 import android.content.DialogInterface;
 import android.os.Build;

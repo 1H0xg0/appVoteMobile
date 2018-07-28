@@ -2,4 +2,8 @@
     <string name="app_name">HACKATHON</string>
     <string name="open">Ouvrir</string>
     <string name="close">Fermer</string>
+    <string name="btn_sondage">Sondage</string>
+    <string name="btn_candidat">Candidat</string>
+    <string name="btn_result">Resultat</string>
+    <string name="btn_vote">Vote</string>
 </resources>

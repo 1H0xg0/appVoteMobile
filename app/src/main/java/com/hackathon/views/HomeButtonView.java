@@ -1,4 +1,4 @@
-package com.example.hackathon.hackathon.views;
+package com.hackathon.views;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.content.IntentFilter;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.BatteryManager;
+import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,10 +15,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.hackathon.hackathon.R;
 
-
-public class HomeButtonView extends LinearLayout {
+public class HomeButtonView extends CardView {
 
     private ImageView imageView;
     private TextView textView;

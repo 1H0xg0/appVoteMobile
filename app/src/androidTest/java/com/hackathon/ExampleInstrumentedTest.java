@@ -1,4 +1,4 @@
-package com.example.hackathon.hackathon;
+package com.hackathon;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
