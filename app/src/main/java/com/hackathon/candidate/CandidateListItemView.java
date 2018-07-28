@@ -15,7 +15,7 @@ import com.hackathon.R;
 import java.text.SimpleDateFormat;
 
 public class CandidateListItemView extends LinearLayout {
-  public static final String TAG = "CandidatListItemView";
+  public static final String TAG = CandidateListItemView.class.getSimpleName();
 
   private Candidate item;
   private ImageView imageView;

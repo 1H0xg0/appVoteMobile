@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import java.util.ArrayList;
 
 public class CandidateListLoader extends AsyncTask<Void, Void, ArrayList<Candidate>> {
+    public static final String TAG = CandidateListLoader.class.getSimpleName();
 
     private CandidateListAdapter adapter;
 

@@ -3,6 +3,8 @@ package com.hackathon.list;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.hackathon.R;
+
 public class ListActivity extends AppCompatActivity {
 
     @Override

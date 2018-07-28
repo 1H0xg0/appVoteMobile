@@ -18,6 +18,6 @@ public class ElectionViewActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         int position = b.getInt("id");
 
-        textView.setText("Nom "+position);
+        textView.setText("Election "+position);
     }
 }

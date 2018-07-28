@@ -18,6 +18,6 @@ public class SondageViewActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         int position = b.getInt("id");
 
-        textView.setText("Result "+position);
+        textView.setText("Sondage "+position);
     }
 }

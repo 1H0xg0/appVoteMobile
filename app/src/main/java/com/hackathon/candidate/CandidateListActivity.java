@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.hackathon.ClickListener;
 import com.hackathon.R;
@@ -15,6 +16,7 @@ import com.hackathon.menu_principale;
 import java.util.ArrayList;
 
 public class CandidateListActivity extends AppCompatActivity implements ClickListener{
+    public static final String TAG = CandidateListActivity.class.getSimpleName();
 
     private RecyclerView recyclerView;
     private ArrayList<Candidate> candidates;
@@ -44,6 +46,7 @@ public class CandidateListActivity extends AppCompatActivity implements ClickLis
         Intent i = new Intent(this, CandidateViewActivity.class);
         i.putExtra("id", position);
         startActivity(i);
+        Toast.makeText(this, "POsition "+position, Toast.LENGTH_SHORT).show();
     }
 
     @Override

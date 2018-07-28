@@ -7,17 +7,11 @@ import android.widget.TextView;
 import com.hackathon.R;
 
 public class CandidateViewActivity extends AppCompatActivity {
+    public static final String TAG = CandidateViewActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate_view);
-
-        TextView textView = findViewById(R.id.textView);
-
-        Bundle b = getIntent().getExtras();
-        int position = b.getInt("id");
-
-        textView.setText("Nom "+position);
     }
 }

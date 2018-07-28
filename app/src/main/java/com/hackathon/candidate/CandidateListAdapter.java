@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 public class CandidateListAdapter extends RecyclerView.Adapter<CandidateListAdapter.ViewHolder>{
+    public static final String TAG = CandidateListAdapter.class.getSimpleName();
+
     private ArrayList<Candidate> mDataSet;
     private Context mContext;
 

@@ -1,6 +1,8 @@
 package com.hackathon.candidate;
 
 public class Candidate {
+    public static final String TAG = Candidate.class.getSimpleName();
+
     private int id;
     private String firstName;
     private String lastName;
