@@ -39,7 +39,7 @@ public class VideoGridItemView extends LinearLayout {
         int i = this.item.getId();
         if(i>=0 && i<4){
           Glide.with(getContext())
-                  .load(Uri.parse("file:///android_asset/videos/"+i+".png"))
+                  .load(Uri.parse("file:///android_asset/videos/0"+i+".png"))
                   .into(imageView);
         }
         textView1.setText(this.item.getLink());

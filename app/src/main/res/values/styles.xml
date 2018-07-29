@@ -11,4 +11,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.NoStatusBar" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+    </style>
+
 </resources>
