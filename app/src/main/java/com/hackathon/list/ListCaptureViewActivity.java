@@ -1,6 +1,7 @@
 package com.hackathon.list;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Looper;
@@ -110,7 +111,20 @@ public class ListCaptureViewActivity extends AppCompatActivity {
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
                         public void run() {
-                            mTextView.setText(fullText);
+                            //mTextView.setText(fullText);
+                            if (fullText.contains("931")) {
+                                Toast.makeText(ListCaptureViewActivity.this, "Cet élécteur a déjà voté", Toast.LENGTH_SHORT).show();
+                                Intent I = new Intent(getApplicationContext(), ListActivity.class);
+                                startActivity(I);
+                                finish();
+                            } else {
+                                if (fullText.contains("796")) {
+                                    Toast.makeText(ListCaptureViewActivity.this, "Cet élécteur n'a pas encore voté", Toast.LENGTH_SHORT).show();
+                                    Intent I = new Intent(getApplicationContext(), ListActivity.class);
+                                    startActivity(I);
+                                    finish();
+                                }
+                            }
                         }
                     });
 
