@@ -100,9 +100,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
                     SharedPreferences.Editor editor = settings.edit();
                     if(lang.equals("fr")){
+                        lang = "mg";
                         if(editor!=null) editor.putString("language", "mg");
                         setLocale("mg");
                     }else{
+                        lang = "fr";
                         if(editor!=null) editor.putString("language", "fr");
                         setLocale("fr");
                     }
