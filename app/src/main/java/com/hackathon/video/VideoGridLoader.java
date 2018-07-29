@@ -16,9 +16,15 @@ public class VideoGridLoader extends AsyncTask<Void, Void, ArrayList<Video>> {
 
     @Override
     protected ArrayList<Video> doInBackground(Void... voids) {
+        String[] args = new String[]{
+          "Sensibilisation",
+          "Blanchissement d'argents",
+          "Financement des parties politiques",
+          "Prevention de la violence du code electoral",
+        };
         ArrayList<Video> videos = new ArrayList<>();
-        for(int i=0; i<20; i++){
-            Video video = new Video("Lien "+1);
+        for(int i=0; i<4; i++){
+            Video video = new Video(i, args[i]);
             videos.add(video);
         }
         return videos;
