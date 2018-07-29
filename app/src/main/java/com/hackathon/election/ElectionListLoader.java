@@ -19,7 +19,7 @@ public class ElectionListLoader extends AsyncTask<Void, Void, ArrayList<Election
     protected ArrayList<Election> doInBackground(Void... voids) {
         ArrayList<Election> elections = new ArrayList<>();
         for(int i=0; i<10; i++){
-            Election election = new Election(i, "Title "+i, "Description "+i, "28 Juillet 2018");
+            Election election = new Election(i, "Election "+i, "Description "+i, "28 Juillet 2018");
             elections.add(election);
         }
         return elections;

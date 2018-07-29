@@ -18,11 +18,27 @@ public class ElectionGridLoader extends AsyncTask<Void, Void, ArrayList<Result>>
     @Override
     protected ArrayList<Result> doInBackground(Void... voids) {
         ArrayList<Result> results = new ArrayList<>();
-        //Election election = new Election(1, "Title "+1, "Description "+1, "28 Juillet 2018");
-        for(int i=0; i<10; i++){
+        String[] names = new String[]{
+                "RABEMANANA",
+                "RAKOTONDRAFARA",
+                "RAFANOMEZANA",
+                "RANDRIANASOLO",
+                "RAZAFINDRABEAINA",
+                "RASOANDRAINY",
+        };
+        String[] lasts = new String[]{
+                "Laurent",
+                "Mathieu",
+                "Adrien",
+                "Andry",
+                "Haja",
+                "Tiana",
+        };
+        for(int i=1; i<7; i++){
             Candidate candidate = new Candidate();
-            candidate.setLastName("Prenom "+i);
-            candidate.setFirstName("Nom "+i);
+            candidate.setId(i);
+            candidate.setFirstName(names[i-1]);
+            candidate.setLastName(lasts[i-1]);
 
             Result result = new Result();
             result.setCandidate(candidate);

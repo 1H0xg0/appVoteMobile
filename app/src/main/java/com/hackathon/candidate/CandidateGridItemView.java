@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.hackathon.R;
@@ -17,6 +18,8 @@ public class CandidateGridItemView extends LinearLayout {
 
   private Candidate item;
   private ImageView imageView;
+  private TextView textView1;
+    private TextView textView2;
 
   public CandidateGridItemView(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -24,6 +27,8 @@ public class CandidateGridItemView extends LinearLayout {
     LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     final View v =  inflater.inflate(R.layout.view_candidate_grid, this, true);
     imageView = v.findViewById(R.id.imageView);
+    textView1 = v.findViewById(R.id.title);
+    textView2 = v.findViewById(R.id.count);
 
   }
 
@@ -36,5 +41,7 @@ public class CandidateGridItemView extends LinearLayout {
                     .load(Uri.parse("file:///android_asset/candidates/"+i+".jpg"))
                     .into(imageView);
         }
+        textView1.setText(this.item.getFirstName());
+        textView2.setText(this.item.getLastName());
     }
 }

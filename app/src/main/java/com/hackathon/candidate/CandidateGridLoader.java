@@ -22,7 +22,7 @@ public class CandidateGridLoader extends AsyncTask<Void, Void, ArrayList<Candida
                 "RAKOTONDRAFARA",
                 "RAFANOMEZANA",
                 "RANDRIANASOLO",
-                "RAZAFINDRABE",
+                "RAZAFINDRABEAINA",
                 "RASOANDRAINY",
         };
         String[] lasts = new String[]{
