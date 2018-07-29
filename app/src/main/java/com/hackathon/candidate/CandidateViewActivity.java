@@ -1,12 +1,15 @@
 package com.hackathon.candidate;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.hackathon.R;
 
 public class CandidateViewActivity extends AppCompatActivity implements View.OnClickListener {
@@ -14,6 +17,7 @@ public class CandidateViewActivity extends AppCompatActivity implements View.OnC
 
     private TextView firstNameView;
     private TextView lastNameView;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +26,19 @@ public class CandidateViewActivity extends AppCompatActivity implements View.OnC
 
         firstNameView = findViewById(R.id.firstNameView);
         lastNameView = findViewById(R.id.lastNameView);
+        imageView = findViewById(R.id.imageView);
 
         Bundle b = getIntent().getExtras();
         if(b!=null) {
+            int i = b.getInt("id");
             String firstName = b.getString("firstName");
             String lastName = b.getString("lastName");
             firstNameView.setText(firstName);
             lastNameView.setText(lastName);
+
+            Glide.with(this)
+                    .load(Uri.parse("file:///android_asset/candidates/"+i+".jpg"))
+                    .into(imageView);
         }
 
         LinearLayout container = findViewById(R.id.container);
