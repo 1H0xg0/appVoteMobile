@@ -101,9 +101,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if(editor!=null) editor.putString("language", "mg");
                         setLocale("mg");
                     }else{
-                        if(editor!=null) editor.putString("language", "mg");
-                        setLocale("mg");
+                        if(editor!=null) editor.putString("language", "fr");
+                        setLocale("fr");
                     }
+                    if(editor!=null) editor.commit();
                 }
             })
             .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
