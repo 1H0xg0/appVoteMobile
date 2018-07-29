@@ -2,9 +2,11 @@ package com.hackathon;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -25,12 +27,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private View btn_file;
     private View btn_list;
     private View btn_setting;
+    private String lang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        loadView();
-
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+        lang = settings.getString("language", "");
+        if (! "".equals(lang) && ! config.locale.getLanguage().equals(lang)) {
+            setLocale(lang);
+        }else{
+            loadView();
+        }
     }
 
     private void loadView() {
@@ -86,7 +95,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     // continue with delete
-                    setLocale("mg");
+                    SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                    SharedPreferences.Editor editor = settings.edit();
+                    if(lang.equals("fr")){
+                        if(editor!=null) editor.putString("language", "mg");
+                        setLocale("mg");
+                    }else{
+                        if(editor!=null) editor.putString("language", "mg");
+                        setLocale("mg");
+                    }
                 }
             })
             .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
