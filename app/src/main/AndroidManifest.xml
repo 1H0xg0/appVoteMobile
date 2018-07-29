@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hackathon">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -30,17 +32,37 @@
         <activity
             android:name=".menu_principale"
             android:screenOrientation="portrait" />
-        <activity android:name=".candidate.CandidateListActivity"></activity>
-        <activity android:name=".candidate.CandidateGridActivity"></activity>
-        <activity android:name=".candidate.CandidateViewActivity"></activity>
-        <activity
-            android:name=".candidate.CandidateDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".election.ElectionListActivity"></activity>
-        <activity
-            android:name=".election.ElectionViewActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".list.ListActivity" />
+        <activity android:name=".candidate.CandidateListActivity">
+
+        </activity>
+        <activity android:name=".candidate.CandidateGridActivity">
+
+        </activity>
+        <activity android:name=".candidate.CandidateViewActivity">
+
+        </activity>
+        <activity android:name=".candidate.CandidateDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".election.ElectionListActivity">
+
+        </activity>
+        <activity android:name=".election.ElectionViewActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".video.VideoGridActivity">
+
+        </activity>
+        <activity android:name=".video.VideoViewActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".list.ListActivity"></activity>
         <activity android:name=".list.ListCaptureViewActivity"></activity>
     </application>
 
