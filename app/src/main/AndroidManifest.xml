@@ -59,7 +59,7 @@
         </activity>
         <activity android:name=".video.VideoViewActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoStatusBar">
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
