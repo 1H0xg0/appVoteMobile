@@ -1,13 +1,11 @@
 package com.hackathon.video;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.MediaController;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.hackathon.R;
@@ -38,12 +36,8 @@ public class VideoViewActivity extends AppCompatActivity {
         }
 
         try {
-            //String path = "http://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4";
-            //String path = "https://www.dailymotion.com/embed/video/x1ade3x";
-            //String path = "http://www.androidbegin.com/tutorial/AndroidCommercial.3gp";
-            //String path = "http://download.itcuties.com/teaser/itcuties-teaser-480.mp4";
-            String path = "https://www.youtube.com/watch?v=zHNyp-3ELO8";
-            videoView.setVideoURI(Uri.parse(path));
+            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
+            videoView.setVideoURI(uri);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
             e.printStackTrace();

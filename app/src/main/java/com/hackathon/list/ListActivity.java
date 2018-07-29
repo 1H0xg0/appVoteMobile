@@ -28,7 +28,7 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
         numcin = (EditText) findViewById(R.id.E1);
 
         capturer.setOnClickListener(this);
-        numcin.setOnClickListener(this);
+        verifier.setOnClickListener(this);
     }
 
     @Override

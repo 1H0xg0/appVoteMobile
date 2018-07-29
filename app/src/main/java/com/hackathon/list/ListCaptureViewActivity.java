@@ -49,7 +49,11 @@ public class ListCaptureViewActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mCameraSource.release();
+        try {
+            mCameraSource.release();
+        }catch (Exception e){
+
+        }
     }
 
     private void startTextRecognizer() {
