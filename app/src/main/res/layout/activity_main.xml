@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/home_title"
-            android:text="HACKATHON"
+            android:text="@string/app_name"
             android:textSize="34sp"
             android:textColor="@color/white"
             android:layout_centerInParent="true"
@@ -56,26 +56,6 @@
             app:srcImage="@drawable/ic_home_vote"
             app:titleText="@string/btn_election"/>
         <com.hackathon.views.HomeButtonView
-            android:id="@+id/btn_doleance"
-            android:background="@android:color/transparent"
-            app:cardBackgroundColor="@android:color/transparent"
-            android:layout_height="0dp"
-            android:layout_width="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:srcImage="@drawable/ic_doleance"
-            app:titleText="@string/btn_doleance"/>
-        <com.hackathon.views.HomeButtonView
-            android:id="@+id/btn_sondage"
-            android:background="@android:color/transparent"
-            app:cardBackgroundColor="@android:color/transparent"
-            android:layout_height="0dp"
-            android:layout_width="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:srcImage="@drawable/ic_sondage"
-            app:titleText="@string/btn_sondage"/>
-        <com.hackathon.views.HomeButtonView
             android:id="@+id/btn_video"
             android:background="@android:color/transparent"
             app:cardBackgroundColor="@android:color/transparent"
@@ -83,17 +63,37 @@
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            app:srcImage="@drawable/ic_sondage"
+            app:srcImage="@drawable/ic_video"
             app:titleText="@string/btn_video"/>
         <com.hackathon.views.HomeButtonView
-            android:id="@+id/btnfile"
+            android:id="@+id/btn_file"
             android:background="@android:color/transparent"
             app:cardBackgroundColor="@android:color/transparent"
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            app:srcImage="@drawable/ic_sondage"
-            app:titleText="@string/btn_video"/>
+            app:srcImage="@drawable/ic_fichier"
+            app:titleText="@string/btn_file"/>
+        <com.hackathon.views.HomeButtonView
+            android:id="@+id/btn_list"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:srcImage="@drawable/ic_home_list"
+            app:titleText="@string/btn_list"/>
+        <com.hackathon.views.HomeButtonView
+            android:id="@+id/btn_setting"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:srcImage="@drawable/ic_parametre"
+            app:titleText="@string/btn_parametre"/>
     </GridLayout>
 </LinearLayout>

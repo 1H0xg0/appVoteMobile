@@ -4,14 +4,14 @@
     <string name="close">Fermer</string>
     <string name="btn_sondage">Sondage</string>
     <string name="btn_candidat">Candidat</string>
-    <string name="btn_result">Resultat</string>
+    <string name="btn_result">Vokatra</string>
     <string name="btn_vote">Vote</string>
-    <string name="first_name">Nom</string>
-    <string name="last_name">Prenom</string>
-    <string name="btn_election">Election</string>
+    <string name="first_name">Anarana</string>
+    <string name="last_name">Fanampiny</string>
+    <string name="btn_election">Fifidianan</string>
     <string name="btn_doleance">Doleance</string>
     <string name="btn_video">Videos</string>
     <string name="btn_file">Fichiers</string>
-    <string name="btn_list">Liste</string>
+    <string name="btn_list">Lisitra</string>
     <string name="btn_parametre">Parametre</string>
 </resources>
