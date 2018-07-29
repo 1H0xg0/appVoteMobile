@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
             case R.id.btn_file :
+                Toast.makeText(this, "En cours de developpement...", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btn_list :
                 i = new Intent (this, ListActivity.class);
                 startActivity(i);
