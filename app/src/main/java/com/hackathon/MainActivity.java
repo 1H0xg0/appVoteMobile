@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(this);
         builder.setTitle(getString(R.string.btn_parametre))
-            .setMessage("Are you sure you want to delete this entry?")
-            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            .setMessage(getString(R.string.change_language))
+            .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     // continue with delete
                     SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
@@ -107,12 +107,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if(editor!=null) editor.commit();
                 }
             })
-            .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+            .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     // do nothing
                 }
             })
-            .setIcon(android.R.drawable.ic_dialog_alert)
             .show();
     }
 

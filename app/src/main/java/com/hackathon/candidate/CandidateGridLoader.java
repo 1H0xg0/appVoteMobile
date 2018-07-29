@@ -18,8 +18,9 @@ public class CandidateGridLoader extends AsyncTask<Void, Void, ArrayList<Candida
     @Override
     protected ArrayList<Candidate> doInBackground(Void... voids) {
         ArrayList<Candidate> candidates = new ArrayList<>();
-        for(int i=0; i<20; i++){
+        for(int i=1; i<7; i++){
             Candidate candidate = new Candidate();
+            candidate.setId(i);
             candidate.setFirstName("Nom "+i);
             candidate.setLastName("Prenom "+i);
             candidates.add(candidate);

@@ -13,5 +13,8 @@
     <string name="btn_video">Videos</string>
     <string name="btn_file">Fichiers</string>
     <string name="btn_list">Liste</string>
-    <string name="btn_parametre">Parametre</string>
+    <string name="btn_parametre">Langage</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="change_language">Cliquez OUI si vous voulez changer de langage</string>
 </resources>
