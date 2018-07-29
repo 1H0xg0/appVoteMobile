@@ -12,10 +12,25 @@ import com.hackathon.R;
 public class CandidateViewActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = CandidateViewActivity.class.getSimpleName();
 
+    private TextView firstNameView;
+    private TextView lastNameView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate_view);
+
+        firstNameView = findViewById(R.id.firstNameView);
+        lastNameView = findViewById(R.id.lastNameView);
+
+        Bundle b = getIntent().getExtras();
+        if(b!=null) {
+            String firstName = b.getString("firstName");
+            String lastName = b.getString("lastName");
+            firstNameView.setText(firstName);
+            lastNameView.setText(lastName);
+        }
+
         LinearLayout container = findViewById(R.id.container);
         for(int i=0; i<container.getChildCount(); i++){
             View view = container.getChildAt(i);
@@ -42,6 +57,8 @@ public class CandidateViewActivity extends AppCompatActivity implements View.OnC
                 intent.putExtra("title", "Autre");
                 break;
         }
+        intent.putExtra("firstName", firstNameView.getText());
+        intent.putExtra("lastName", lastNameView.getText());
         intent.putExtra("content", text);
         startActivity(intent);
     }

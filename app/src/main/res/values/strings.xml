@@ -17,4 +17,8 @@
     <string name="yes">Oui</string>
     <string name="no">Non</string>
     <string name="change_language">Cliquez OUI si vous voulez changer de langage</string>
+    <string name="candidate_profile">Profile du candidat</string>
+    <string name="candidate_biographie">Biographie du candidat</string>
+    <string name="candidate_program">Programmes du candidat</string>
+    <string name="other_info">Autres informations</string>
 </resources>
