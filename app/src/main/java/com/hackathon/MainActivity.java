@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.hackathon.candidate.CandidateGridActivity;
 import com.hackathon.election.ElectionListActivity;
+import com.hackathon.list.ListActivity;
 import com.hackathon.video.VideoGridActivity;
 
 import java.util.Locale;
@@ -79,7 +80,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_file :
             case R.id.btn_list :
-                Toast.makeText(this, "En cours de developpement", Toast.LENGTH_SHORT).show();
+                i = new Intent (this, ListActivity.class);
+                startActivity(i);
                 break;
             case R.id.btn_setting :
                 showDialogBox();
