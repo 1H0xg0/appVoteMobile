@@ -44,7 +44,9 @@ public class CandidateListActivity extends AppCompatActivity implements ClickLis
     public void onClick(View view, int position) {
         Candidate item = candidates.get(position);
         Intent i = new Intent(this, CandidateViewActivity.class);
-        i.putExtra("id", position);
+        i.putExtra("id", item.getId());
+        i.putExtra("firstName", item.getFirstName());
+        i.putExtra("lastName", item.getLastName());
         startActivity(i);
     }
 

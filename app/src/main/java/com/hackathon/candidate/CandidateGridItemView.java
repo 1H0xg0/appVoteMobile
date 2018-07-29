@@ -33,7 +33,7 @@ public class CandidateGridItemView extends LinearLayout {
         int i = this.item.getId();
         if(i>0 && i<7){
             Glide.with(getContext())
-                    .load(Uri.parse("file:///android_asset/candiates/"+i+".jpg"))
+                    .load(Uri.parse("file:///android_asset/candidates/"+i+".jpg"))
                     .into(imageView);
         }
     }

@@ -10,12 +10,12 @@
         <ImageView
             android:id="@+id/header_cover_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
             android:src="@drawable/profile_bg" />
 
         <ImageButton
-            android:id="@+id/user_profile_photo"
+            android:id="@+id/imageView"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_below="@+id/header_cover_image"
@@ -37,7 +37,7 @@
             android:paddingBottom="24dp">
 
             <TextView
-                android:id="@+id/user_profile_name"
+                android:id="@+id/firstNameView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -48,17 +48,16 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/user_profile_short_bio"
+                android:id="@+id/lastNameView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/user_profile_name"
+                android:layout_below="@+id/firstNameView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
                 android:text="Android free tutorials and example"
                 android:textColor="#fff"
                 android:textSize="14sp" />
         </RelativeLayout>
-
 
         <LinearLayout
             android:id="@+id/container"
@@ -72,17 +71,19 @@
                 android:id="@+id/profile"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:foreground="?android:selectableItemBackground"
                 android:layout_margin="5dp"
                 android:background="#fff"
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Android Profile UI Design" />
+                android:text="@string/candidate_profile" />
 
             <TextView
                 android:id="@+id/biographie"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:foreground="?android:selectableItemBackground"
                 android:layout_margin="5dp"
                 android:layout_marginBottom="3dp"
                 android:layout_marginTop="3dp"
@@ -90,23 +91,25 @@
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Android Profile XMl UI Design" />
+                android:text="@string/candidate_biographie" />
 
             <TextView
                 android:id="@+id/programme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:foreground="?android:selectableItemBackground"
                 android:layout_margin="5dp"
                 android:background="#fff"
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Android Profile UI Design" />
+                android:text="@string/candidate_program" />
 
             <TextView
                 android:id="@+id/other"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:foreground="?android:selectableItemBackground"
                 android:layout_margin="5dp"
                 android:layout_marginBottom="3dp"
                 android:layout_marginTop="3dp"
@@ -114,7 +117,7 @@
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Android Profile XMl UI Design" />
+                android:text="@string/other_info" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>
