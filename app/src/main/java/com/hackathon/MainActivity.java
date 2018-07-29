@@ -9,6 +9,7 @@ import android.view.View;
 import com.hackathon.candidate.CandidateGridActivity;
 import com.hackathon.candidate.CandidateListActivity;
 import com.hackathon.election.ElectionListActivity;
+import com.hackathon.list.ListActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
             case R.id.btn_doleance :
-                i = new Intent(this, LoginActivity.class);
+                i = new Intent(this, ListActivity.class);
                 startActivity(i);
                 break;
             case R.id.btn_sondage :

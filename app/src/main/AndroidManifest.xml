@@ -4,11 +4,13 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_i_gasikara"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_i_gasikara"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -28,29 +30,18 @@
         <activity
             android:name=".menu_principale"
             android:screenOrientation="portrait" />
-        <activity android:name=".candidate.CandidateListActivity">
-
-        </activity>
-        <activity android:name=".candidate.CandidateGridActivity">
-
-        </activity>
-        <activity android:name=".candidate.CandidateViewActivity">
-
-        </activity>
-        <activity android:name=".candidate.CandidateDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-
-        <activity android:name=".election.ElectionListActivity">
-
-        </activity>
-        <activity android:name=".election.ElectionViewActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-
-        <activity android:name=".list.ListActivity"></activity>
+        <activity android:name=".candidate.CandidateListActivity"></activity>
+        <activity android:name=".candidate.CandidateGridActivity"></activity>
+        <activity android:name=".candidate.CandidateViewActivity"></activity>
+        <activity
+            android:name=".candidate.CandidateDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".election.ElectionListActivity"></activity>
+        <activity
+            android:name=".election.ElectionViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".list.ListActivity" />
+        <activity android:name=".list.ListCaptureViewActivity"></activity>
     </application>
 
 </manifest>
